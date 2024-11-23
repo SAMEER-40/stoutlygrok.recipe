@@ -1,0 +1,117 @@
+.search-page {
+    margin-left: 280px;
+    padding: 4rem;
+    min-height: 100vh;
+}
+
+.search-form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    max-width: 100%;
+}
+
+.search-input {
+    flex: 1;
+    padding: 1.2rem 1.5rem;
+    font-size: 1.1rem;
+    border: 2px solid var(--whisper);
+    outline: none;
+    transition: all 0.3s;
+    background: white;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.search-input:focus {
+    border-color: var(--ink);
+}
+
+.search-btn {
+    background: var(--ink);
+    color: white;
+    border: none;
+    padding: 1.2rem 3rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    letter-spacing: 0.5px;
+}
+
+.search-btn:hover {
+    background: var(--rust);
+}
+
+.filters {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.filters select {
+    padding: 0.9rem 1.5rem;
+    border: 2px solid var(--whisper);
+    font-size: 1rem;
+    background: white;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s;
+    color: var(--ink);
+    font-weight: 500;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.filters select:focus {
+    border-color: var(--ink);
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    grid-auto-rows: 320px;
+}
+
+.recipe-grid> :nth-child(4n+1) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.recipe-grid> :nth-child(6n+2) {
+    grid-row: span 2;
+}
+
+.loading,
+.empty-state {
+    text-align: center;
+    padding: 6rem 2rem;
+    color: var(--slate);
+}
+
+.empty-state {
+    background: white;
+}
+
+@media (max-width: 1200px) {
+    .search-page {
+        margin-left: 0;
+        padding: 3rem 2rem;
+    }
+
+    .recipe-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .recipe-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .recipe-grid> :nth-child(4n+1),
+    .recipe-grid> :nth-child(6n+2) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
