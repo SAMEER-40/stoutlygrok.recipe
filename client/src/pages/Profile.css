@@ -1,0 +1,142 @@
+.profile-page {
+    margin-left: 280px;
+    min-height: 100vh;
+    padding: 4rem;
+}
+
+.profile-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    overflow: hidden;
+}
+
+.profile-header {
+    background: var(--ink);
+    color: white;
+    padding: 4rem;
+    position: relative;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    background: var(--rust);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.profile-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.profile-header p {
+    opacity: 0.8;
+    margin: 0.5rem 0 0;
+    font-size: 1.1rem;
+}
+
+.profile-card form {
+    padding: 3rem;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+    color: var(--ink);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    border: 2px solid var(--whisper);
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: all 0.3s;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--ink);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.save-btn {
+    width: 100%;
+    background: var(--ink);
+    color: white;
+    border: none;
+    padding: 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.save-btn:hover:not(:disabled) {
+    background: var(--rust);
+}
+
+.message {
+    padding: 1.25rem;
+    margin: 0 3rem 1.5rem;
+    font-weight: 500;
+}
+
+.message.success {
+    background: #f0f7ed;
+    color: #4a6741;
+    border-left: 4px solid var(--sage);
+}
+
+.message.error {
+    background: #fff5f5;
+    color: #c53030;
+    border-left: 4px solid #c53030;
+}
+
+@media (max-width: 1200px) {
+    .profile-page {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-page {
+        padding: 2rem;
+    }
+
+    .profile-header,
+    .profile-card form {
+        padding: 2rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
