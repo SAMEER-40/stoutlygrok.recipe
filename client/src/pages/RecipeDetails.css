@@ -1,0 +1,226 @@
+.recipe-details {
+    margin-left: 280px;
+    min-height: 100vh;
+}
+
+.recipe-hero {
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent 30%, rgba(0, 0, 0, 0.85));
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 4rem;
+    color: white;
+}
+
+.hero-overlay h1 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+    line-height: 1.1;
+}
+
+.meta {
+    display: flex;
+    gap: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.fav-btn {
+    background: white;
+    border: none;
+    color: var(--ink);
+    padding: 1rem 2rem;
+    cursor: pointer;
+    width: fit-content;
+    font-weight: 600;
+    transition: all 0.3s;
+    letter-spacing: 0.5px;
+}
+
+.fav-btn:hover {
+    background: var(--rust);
+    color: white;
+}
+
+.recipe-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem;
+}
+
+.main-content section {
+    background: white;
+    padding: 3rem;
+    margin-bottom: 2rem;
+}
+
+.main-content h2 {
+    color: var(--ink);
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+}
+
+.ingredients ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ingredients li {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--whisper);
+    font-size: 1.05rem;
+}
+
+.ingredients li:last-child {
+    border-bottom: none;
+}
+
+.nutrition-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.nutrient {
+    background: var(--paper);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.nutrient .value {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--rust);
+}
+
+.nutrient .label {
+    font-size: 0.9rem;
+    color: var(--slate);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.sidebar {
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+}
+
+.reviews-section {
+    background: white;
+    padding: 2.5rem;
+}
+
+.reviews-section h2 {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.review-form select,
+.review-form textarea {
+    padding: 1rem;
+    border: 2px solid var(--whisper);
+    font-size: 1rem;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.review-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.review-form button {
+    background: var(--ink);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.review-form button:hover {
+    background: var(--rust);
+}
+
+.reviews-list {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.review {
+    background: var(--paper);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.no-reviews {
+    color: var(--slate);
+    font-style: italic;
+}
+
+.loading,
+.error {
+    text-align: center;
+    padding: 6rem;
+    color: var(--slate);
+    font-size: 1.2rem;
+}
+
+@media (max-width: 1200px) {
+    .recipe-details {
+        margin-left: 0;
+    }
+
+    .recipe-content {
+        grid-template-columns: 1fr;
+        padding: 3rem 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-overlay {
+        padding: 2rem;
+    }
+
+    .hero-overlay h1 {
+        font-size: 2.5rem;
+    }
+
+    .main-content section {
+        padding: 2rem;
+    }
+
+    .nutrition-grid {
+        grid-template-columns: 1fr;
+    }
+}
