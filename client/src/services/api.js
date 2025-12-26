@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://sweet-kiwis-shout.loca.lt/api';
+const API_URL = 'https://stoutlygrok-recipe.onrender.com/api';
 
 // Create axios instance with auth header
 const api = axios.create({
